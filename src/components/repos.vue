@@ -22,21 +22,26 @@
         <button v-on:click="listartodos">Todos</button>
       </div>
     </section>
-    <section class="projetos">
-      <card
-        v-for="item in dados"
-        :key="item"
-        :titulo="item.name"
-        :descricao="item.description"
-        :linke="item.html_url"
-        :linguagem="item.language"
-      />
+    <section class="intro">
+      <div class="projetos bg-gradient">
+        <card
+          v-for="(item, index) in dados"
+          v-on:mouseover="addClase('card' + index)"
+          :id="'card' + index"
+          :key="item"
+          :titulo="item.name"
+          :descricao="item.description"
+          :linke="item.html_url"
+          :linguagem="item.language"
+        />
+      </div>
     </section>
   </div>
 </template>
 <script>
 import axios from "axios";
 import card from "./card.vue";
+import "animate.css";
 export default {
   components: {
     card,
@@ -69,6 +74,15 @@ export default {
       this.dados = listar;
     },
 
+    addClase(elemento) {
+      let elementoX = document.getElementById(elemento);
+      elementoX.classList.add("animate__animated", "animate__pulse");
+
+      elementoX.onmouseout = () => {
+        elementoX.classList.remove("animate__animated", "animate__pulse");
+      };
+    },
+
     listartodos() {
       return (this.dados = this.dadoss);
     },
@@ -95,9 +109,9 @@ export default {
   justify-content: center;
   align-items: center;
   padding-bottom: 100px;
-  padding-top: 30px;
+  padding-top: 70px;
   background-color: #1e1842;
-  height: 330px;
+  height: 350px;
   font-family: "Nunito", sans-serif;
   color: white;
   font-size: 22px;
@@ -207,8 +221,19 @@ input {
   justify-content: center;
 }
 
-@media (max-width: 600px) {
+.intro{
+  background-image: url("../assets/tagblog.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  height: 100% !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
+@media (max-width: 600px) {
   .search div button {
     width: 100px;
     padding: 5px;
@@ -287,5 +312,10 @@ h1 {
   text-align: left;
   width: 690px;
   font-size: 18px;
+}
+
+.bg-gradient {
+  background-color: rgba(255, 255, 255, 0.8);
+  height: 100%;
 }
 </style>

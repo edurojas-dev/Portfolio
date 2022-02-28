@@ -1,12 +1,19 @@
 <template>
   <div id="intro">
     <div class="bg-gradient">
-      <div style="text-align: center;">
-        <img src="https://avatars.githubusercontent.com/u/61126545?v=4" alt="ER" class="imgedu">
+      <div style="text-align: center">
+        <img
+          src="https://avatars.githubusercontent.com/u/61126545?v=4"
+          alt="ER"
+          class="imgedu"
+        />
         <h1>Bem-vindo ao Portfólio</h1>
-        <h4>Listagem de repositorio do github</h4>
-        <br>
-        <router-link to="/repositorio" class="btn">Acessar</router-link>
+        <h4>Currículo web de um programador</h4>
+        <br />
+        <router-link to="/repositorio" class="btn">Quem é Edu?</router-link>
+        <router-link to="/repositorio" class="btn">Projetos</router-link>
+        <router-link to="/repositorio" class="btn">Certificados</router-link>
+        <!-- <a href="https://www.linkedin.com/feed/" target="_blank" class="btn">Linkedin</a> -->
       </div>
       <span id="logo">Eduardo Rojas</span>
     </div>
@@ -14,26 +21,26 @@
 </template>
 <script>
 export default {
-  name: "intro"
-}
+  name: "intro",
+};
 </script>
 <style scoped>
-@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
-#intro{
-  background-image: url('../assets/tagblog.png');
+@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
+#intro {
+  background-image: url("../assets/tagblog.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
-  font-family: 'Nunito', sans-serif;
+  font-family: "Nunito", sans-serif;
   height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.bg-gradient{
-  background-color: rgba(0,0,0,0.4);
+.bg-gradient {
+  background-color: rgba(0, 0, 0, 0.4);
   height: 100vh;
   display: flex;
   align-items: center;
@@ -41,19 +48,24 @@ export default {
   width: 100vw;
 }
 
-.btn{
-  background-color: #5462A1;
+.btn {
+  background-color: #5462a1;
   color: white;
   padding: 10px;
   text-decoration: none;
   border-radius: 5px;
+  margin: 10px auto;
+  width: 160px !important;
+  display: block;
 }
 
-h1, #logo, h4{
+h1,
+#logo,
+h4 {
   color: white;
 }
 
-#logo{
+#logo {
   position: absolute;
   top: 3%;
   left: 5%;
@@ -61,10 +73,16 @@ h1, #logo, h4{
   font-weight: 800;
 }
 
-.imgedu{
+.imgedu {
   border-radius: 50%;
   box-shadow: 5px 5px 5px #ffff;
   margin-bottom: 10px;
   max-width: 60%;
+}
+
+@media (max-width: 660px) {
+  #logo {
+    left: 25%;
+  }
 }
 </style>
