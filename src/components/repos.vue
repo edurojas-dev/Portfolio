@@ -1,5 +1,5 @@
 <template>
-  <div id="blog">
+  <div id="blog" style="max-width: 100%">
     <router-link to="/" id="logo">Eduardo Rojas</router-link>
     <img :src="require('../assets/01.gif')" alt="" id="bgGif" />
     <section class="search">
@@ -23,7 +23,7 @@
       </div>
     </section>
     <section class="intro">
-      <div class="projetos bg-gradient">
+      <div class="projetos bg-gradient" style="max-width: 100%">
         <card
           v-for="(item, index) in dados"
           v-on:mouseover="addClase('card' + index)"

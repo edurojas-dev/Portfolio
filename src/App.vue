@@ -6,19 +6,20 @@
 
 <script>
 export default {
-  name: 'App',
-}
+  name: "App",
+};
 </script>
 
 <style>
-*{
+* {
   margin: 0;
   padding: 0;
 }
 
-@media(max-width: 800px){
-  body{
+@media (max-width: 800px) {
+  body {
     overflow-x: hidden;
+    overflow-y: hidden;
   }
 }
 </style>

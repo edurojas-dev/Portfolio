@@ -1,5 +1,5 @@
 <template>
-  <div :class="estilos">
+  <div :class="estilos" style="background: white">
     <div class="card-text">
       <div class="cardImg">
         <h2>{{ titulo }}</h2>
@@ -180,8 +180,9 @@ export default {
     float: right;
   }
 
-  h1{
-    font-size: 5vw;
+  h1,
+  h2 {
+    font-size: 4vw !important;
   }
 }
 

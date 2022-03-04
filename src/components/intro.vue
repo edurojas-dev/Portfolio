@@ -7,15 +7,16 @@
           alt="ER"
           class="imgedu"
         />
-        <h1>Bem-vindo ao Portfólio</h1>
-        <h4>Currículo web de um programador</h4>
+        <h1>Eduardo Rojas</h1>
+        <h4>Developer Fronend</h4>
         <br />
-        <router-link to="/repositorio" class="btn">Quem é Edu?</router-link>
+        <router-link to="/" class="btn">Quem é Edu?</router-link>
         <router-link to="/repositorio" class="btn">Projetos</router-link>
-        <router-link to="/repositorio" class="btn">Certificados</router-link>
-        <!-- <a href="https://www.linkedin.com/feed/" target="_blank" class="btn">Linkedin</a> -->
+        <!-- <router-link to="/" class="btn">Certificados</router-link> -->
+        <!-- <router-link to="https://www.linkedin.com/in/edurojas-developer/" class="btn">Linkedin</router-link> -->
+        <a href="https://www.linkedin.com/in/edurojas-developer/" target="_blank" class="btn">Linkedin</a>
       </div>
-      <span id="logo">Eduardo Rojas</span>
+      <span id="logo">Portfólio</span>
     </div>
   </div>
 </template>
@@ -82,7 +83,7 @@ h4 {
 
 @media (max-width: 660px) {
   #logo {
-    left: 25%;
+    display: none;
   }
 }
 </style>
