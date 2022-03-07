@@ -6,11 +6,16 @@
       <div class="item">
         <h1>Projetos GitHub</h1>
       </div>
-      <p class="descPortf">
+      <!-- <p class="descPortf">
         Este portfólio foi construindo consumindo a API do GitHub, onde é
         requisitado as informações dos repositórios e link dos projetos
         respectivamente. A maioria dos projetos listados aqui foram feitos com
         as tecnologias fundamentais do front-end, como HTML5, CSS3 e JavaScript.
+      </p> -->
+       <p class="descPortf">
+        Portfólio integrado com API do GitHub por meio do Axios e desenvolvido com Vue.js. <br>
+        Aqui encontra-se todos os projetos que realizo para fins de estudos e prática de programação Front-end,
+        utilizando desde as tecnologias como HTML5, CSS3 e JavaScript, e o framework Vue.js.
       </p>
       <br />
       <p class="filtro">Filtrar por Tecnologias:</p>
@@ -94,6 +99,7 @@ export default {
 #bgGif {
   position: absolute;
   right: 0;
+  /* height: 50%; */
 }
 
 .nav div {
@@ -108,10 +114,10 @@ export default {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-bottom: 100px;
-  padding-top: 70px;
+  padding-bottom: 70px;
+  padding-top: 50px;
   background-color: #1e1842;
-  height: 350px;
+  height: 277px;
   font-family: "Nunito", sans-serif;
   color: white;
   font-size: 22px;
@@ -254,7 +260,9 @@ input {
     display: none;
   }
   .search {
-    height: 380px;
+    height: auto;
+    padding-bottom: 10px;
+    padding-top: 7px;
     /* display: block !important; */
   }
   input {
@@ -271,23 +279,17 @@ input {
   }
 
   .descPortf {
-    max-width: 90%;
-    font-size: 5vw;
-    text-align: center;
+    display: none;
   }
 
   h1 {
-    margin-top: 80px;
+    margin-top: 20px;
   }
 
   .btns {
     max-width: 85%;
     text-align: center;
   }
-}
-
-h1 {
-  margin-bottom: 20px;
 }
 
 .descPortf {

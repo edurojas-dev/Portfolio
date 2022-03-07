@@ -17,9 +17,10 @@ export default {
 }
 
 @media (max-width: 800px) {
-  body {
-    overflow-x: hidden;
-    overflow-y: hidden;
+  #app{
+    max-width: 100% !important;
+    overflow-x: hidden !important;
   }
+
 }
 </style>
