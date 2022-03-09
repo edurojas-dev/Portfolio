@@ -8,7 +8,7 @@
           class="imgedu"
         />
         <h1>Eduardo Rojas</h1>
-        <h4>Developer Fronend</h4>
+        <h4>Developer Front-end</h4>
         <br />
         <router-link to="/" class="btn">Quem é Edu?</router-link>
         <router-link to="/repositorio" class="btn">Projetos</router-link>
@@ -84,6 +84,16 @@ h4 {
 @media (max-width: 660px) {
   #logo {
     display: none;
+  }
+}
+
+@media (max-width: 1380px) {
+  .imgedu{
+    max-width: 44%;
+  }
+  
+  .btn {
+    padding: 5px;
   }
 }
 </style>

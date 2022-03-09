@@ -12,13 +12,15 @@
         respectivamente. A maioria dos projetos listados aqui foram feitos com
         as tecnologias fundamentais do front-end, como HTML5, CSS3 e JavaScript.
       </p> -->
-       <p class="descPortf">
-        Portfólio integrado com API do GitHub por meio do Axios e desenvolvido com Vue.js. <br>
-        Aqui encontra-se todos os projetos que realizo para fins de estudos e prática de programação Front-end,
-        utilizando desde as tecnologias como HTML5, CSS3 e JavaScript, e o framework Vue.js.
+      <p class="descPortf">
+        Portfólio integrado com API do GitHub por meio do Axios e desenvolvido
+        com Vue.js. <br />
+        Aqui encontra-se todos os projetos que realizo para fins de estudos e
+        prática de programação Front-end, utilizando desde as tecnologias como
+        HTML5, CSS3 e JavaScript, e o framework Vue.js.
       </p>
       <br />
-      <p class="filtro">Filtrar por Tecnologias:</p>
+      <p class="filtro">Filtrar por Tecnologia:</p>
       <div class="btns">
         <button v-on:click="listarPorlang('HTML')">HTML5</button>
         <button v-on:click="listarPorlang('CSS')">CSS3</button>
@@ -227,7 +229,7 @@ input {
   justify-content: center;
 }
 
-.intro{
+.intro {
   background-image: url("../assets/tagblog.png");
   background-size: cover;
   background-repeat: no-repeat;
@@ -319,5 +321,20 @@ input {
 .bg-gradient {
   background-color: rgba(255, 255, 255, 0.8);
   height: 100%;
+}
+
+@media (max-width: 1380px) {
+  #bgGif {
+    width: 23%;
+    top: 25%;
+  }
+
+  .btns button {
+    padding: 5px !important;
+  }
+
+  .projetos {
+    padding: 0 70px !important;
+  }
 }
 </style>
