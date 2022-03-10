@@ -6,12 +6,6 @@
       <div class="item">
         <h1>Projetos GitHub</h1>
       </div>
-      <!-- <p class="descPortf">
-        Este portfólio foi construindo consumindo a API do GitHub, onde é
-        requisitado as informações dos repositórios e link dos projetos
-        respectivamente. A maioria dos projetos listados aqui foram feitos com
-        as tecnologias fundamentais do front-end, como HTML5, CSS3 e JavaScript.
-      </p> -->
       <p class="descPortf">
         Portfólio integrado com API do GitHub por meio do Axios e desenvolvido
         com Vue.js. <br />

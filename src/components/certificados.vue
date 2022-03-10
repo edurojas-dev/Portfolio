@@ -2,28 +2,18 @@
   <div id="intro">
     <div class="bg-gradient">
       <div style="text-align: center">
-        <img
-          src="https://avatars.githubusercontent.com/u/61126545?v=4"
-          alt="ER"
-          class="imgedu"
-        />
-        <h1>Eduardo Rojas</h1>
-        <h4>Developer Front-end</h4>
-        <br />
-        <router-link to="/" class="btn">Quem é Edu?</router-link>
-        <router-link to="/repositorio" class="btn">Projetos</router-link>
-        <router-link to="/certificados" class="btn">Cursos Realizados</router-link>
-        <!-- <router-link to="/" class="btn">Certificados</router-link> -->
-        <!-- <router-link to="https://www.linkedin.com/in/edurojas-developer/" class="btn">Linkedin</router-link> -->
-        <a href="https://www.linkedin.com/in/edurojas-developer/" target="_blank" class="btn">Linkedin</a>
+       <div class="container bg-info">
+         <div class="lead text-white">TESTE</div>
+       </div>
       </div>
       <span id="logo">Portfólio</span>
     </div>
   </div>
 </template>
 <script>
+// import "bootstrap/dist/css/bootstrap.min.css"
 export default {
-  name: "intro",
+  name: "certificados",
 };
 </script>
 <style scoped>
@@ -50,18 +40,7 @@ export default {
   width: 100vw;
 }
 
-.btn {
-  background-color: #5462a1;
-  color: white;
-  padding: 10px;
-  text-decoration: none;
-  border-radius: 5px;
-  margin: 10px auto;
-  width: 160px !important;
-  display: block;
-}
 
-h1,
 #logo,
 h4 {
   color: white;
@@ -88,13 +67,4 @@ h4 {
   }
 }
 
-@media (max-width: 1380px) {
-  .imgedu{
-    max-width: 44%;
-  }
-  
-  .btn {
-    padding: 5px;
-  }
-}
 </style>
