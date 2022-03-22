@@ -6,7 +6,7 @@ import cert from "../components/certificados.vue"
 const routes = [
   { path: "/", name: "home", component: intro },
   { path: "/repositorio", name: "repositorio", component: repos },
-  { path: "/certificados", name: "certificados", component: cert }
+  // { path: "/certificados", name: "certificados", component: cert }
 ];
 
 const router = createRouter({

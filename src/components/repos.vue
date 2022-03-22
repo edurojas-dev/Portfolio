@@ -1,7 +1,7 @@
 <template>
   <div id="blog" style="max-width: 100%">
     <router-link to="/" id="logo">Eduardo Rojas</router-link>
-    <img :src="require('../assets/01.gif')" alt="" id="bgGif" />
+    <!-- <img :src="require('../assets/01.gif')" alt="" id="bgGif" /> -->
     <section class="search">
       <div class="item">
         <h1>Projetos GitHub</h1>
@@ -112,7 +112,11 @@ export default {
   align-items: center;
   padding-bottom: 70px;
   padding-top: 50px;
-  background-color: #1e1842;
+  /* background-color: #1e1842; */
+  background-image: url("../assets/bg3.png");
+  background-attachment: fixed;
+  /* background-position: cen; */
+  background-size: 100%;
   height: 277px;
   font-family: "Nunito", sans-serif;
   color: white;
@@ -235,59 +239,6 @@ input {
   justify-content: center;
 }
 
-@media (max-width: 600px) {
-  .search div button {
-    width: 100px;
-    padding: 5px;
-    border: none;
-    border-radius: 10px;
-    margin: 15px 10px;
-    cursor: pointer;
-    font-size: 15px;
-    font-weight: 400;
-  }
-
-  .filtro {
-    text-align: center !important;
-    font-size: 18px;
-  }
-
-  #logo {
-    display: none;
-  }
-  .search {
-    height: auto;
-    padding-bottom: 10px;
-    padding-top: 7px;
-    /* display: block !important; */
-  }
-  input {
-    width: 400px;
-  }
-
-  .projetos {
-    display: block;
-    padding: 0;
-  }
-
-  #bgGif {
-    display: none;
-  }
-
-  .descPortf {
-    display: none;
-  }
-
-  h1 {
-    margin-top: 20px;
-  }
-
-  .btns {
-    max-width: 85%;
-    text-align: center;
-  }
-}
-
 .descPortf {
   width: 680px;
   font-size: 16px;
@@ -329,6 +280,63 @@ input {
 
   .projetos {
     padding: 0 70px !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .search{
+    background-color: #17203F;
+    background-image: none;
+  }
+  .search div button {
+    width: 100px;
+    padding: 5px;
+    border: none;
+    border-radius: 10px;
+    margin: 15px 10px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 400;
+  }
+
+  .filtro {
+    text-align: center !important;
+    font-size: 18px;
+  }
+
+  #logo {
+    display: none;
+  }
+  .search {
+    height: auto;
+    padding-bottom: 10px;
+    padding-top: 7px;
+    /* display: block !important; */
+  }
+  input {
+    width: 400px;
+  }
+
+  .projetos {
+    display: block;
+    padding: 0 !important;
+  }
+
+  #bgGif {
+    display: none;
+  }
+
+  .descPortf {
+    display: none;
+  }
+
+  h1 {
+    margin-top: 20px;
+  }
+
+  .btns {
+    max-width: 85%;
+    text-align: center;
   }
 }
 </style>

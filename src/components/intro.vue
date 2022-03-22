@@ -12,10 +12,15 @@
         <br />
         <router-link to="/" class="btn">Quem é Edu?</router-link>
         <router-link to="/repositorio" class="btn">Projetos</router-link>
-        <router-link to="/certificados" class="btn">Cursos Realizados</router-link>
+        <!-- <router-link to="/certificados" class="btn">Cursos Realizados</router-link> -->
         <!-- <router-link to="/" class="btn">Certificados</router-link> -->
         <!-- <router-link to="https://www.linkedin.com/in/edurojas-developer/" class="btn">Linkedin</router-link> -->
-        <a href="https://www.linkedin.com/in/edurojas-developer/" target="_blank" class="btn">Linkedin</a>
+        <a
+          href="https://www.linkedin.com/in/edurojas-developer/"
+          target="_blank"
+          class="btn"
+          >Linkedin</a
+        >
       </div>
       <span id="logo">Portfólio</span>
     </div>
@@ -89,10 +94,10 @@ h4 {
 }
 
 @media (max-width: 1380px) {
-  .imgedu{
+  .imgedu {
     max-width: 44%;
   }
-  
+
   .btn {
     padding: 5px;
   }
