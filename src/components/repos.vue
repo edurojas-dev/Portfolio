@@ -58,10 +58,12 @@ export default {
   },
 
   mounted() {
-    axios.get("https://api.github.com/users/edurojas-dev/repos").then((r) => {
-      this.dadoss = r.data;
-      this.dados = r.data;
-    });
+    setTimeout(() => {
+      axios.get("https://api.github.com/users/edurojas-dev/repos").then((r) => {
+        this.dadoss = r.data;
+        this.dados = r.data;
+      });
+    }, 800);
   },
 
   methods: {
@@ -95,7 +97,6 @@ export default {
 #bgGif {
   position: absolute;
   right: 0;
-  /* height: 50%; */
 }
 
 .nav div {

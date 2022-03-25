@@ -91,6 +91,9 @@ h4 {
   #logo {
     display: none;
   }
+  #intro{
+    background-image: url("../assets/bg-mobile4.png");
+  }
 }
 
 @media (max-width: 1380px) {
