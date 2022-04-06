@@ -6,11 +6,12 @@
           src="https://avatars.githubusercontent.com/u/61126545?v=4"
           alt="ER"
           class="imgedu"
+          width="200" height="200"
         />
         <h1>Eduardo Rojas</h1>
-        <h4>Developer Front-end</h4>
+        <h4>Developer Frontend</h4>
         <br />
-        <router-link to="/" class="btn">Quem é Edu?</router-link>
+        <!-- <router-link to="/" class="btn">Quem é Edu?</router-link> -->
         <router-link to="/repositorio" class="btn">Projetos</router-link>
         <!-- <router-link to="/certificados" class="btn">Cursos Realizados</router-link> -->
         <!-- <router-link to="/" class="btn">Certificados</router-link> -->
@@ -84,7 +85,6 @@ h4 {
   border-radius: 50%;
   box-shadow: 5px 5px 5px #ffff;
   margin-bottom: 10px;
-  max-width: 60%;
 }
 
 @media (max-width: 660px) {
@@ -92,15 +92,11 @@ h4 {
     display: none;
   }
   #intro{
-    background-image: url("../assets/bg-mobile4.png");
+    background-image: url("../assets/bgMobile.png");
   }
 }
 
 @media (max-width: 1380px) {
-  .imgedu {
-    max-width: 44%;
-  }
-
   .btn {
     padding: 5px;
   }

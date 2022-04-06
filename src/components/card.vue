@@ -11,6 +11,7 @@
       </p>
     </div>
     <div class="areabtn">
+      <a :href="linkeSite" :style="bg" target="_blank" v-if="linkeSite != '' && linkeSite != undefined">WebSite</a>
       <a :href="linke" :style="bg" target="_blank">Ver projeto</a>
     </div>
   </div>
@@ -29,6 +30,7 @@ export default {
   props: {
     titulo: String,
     descricao: String,
+    linkeSite: String,
     linke: String,
     linguagem: String,
   },
@@ -134,6 +136,7 @@ export default {
   width: 100px;
   border: none;
   font-size: 17px;
+  margin: 0 4px;
 }
 
 .cardImg {

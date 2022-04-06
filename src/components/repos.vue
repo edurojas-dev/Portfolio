@@ -34,6 +34,7 @@
           :descricao="item.description"
           :linke="item.html_url"
           :linguagem="item.language"
+          :linkeSite="item.homepage"
         />
       </div>
     </section>
@@ -62,6 +63,7 @@ export default {
       axios.get("https://api.github.com/users/edurojas-dev/repos").then((r) => {
         this.dadoss = r.data;
         this.dados = r.data;
+        console.log(this.dados)
       });
     }, 800);
   },
