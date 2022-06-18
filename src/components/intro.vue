@@ -6,30 +6,64 @@
           src="https://avatars.githubusercontent.com/u/61126545?v=4"
           alt="ER"
           class="imgedu"
-          width="200" height="200"
+          width="200"
+          height="200"
         />
         <h1>Eduardo Rojas</h1>
-        <h4>Developer Frontend</h4>
+        <h4>Frontend Developer</h4>
         <br />
         <!-- <router-link to="/" class="btn">Quem é Edu?</router-link> -->
-        <router-link to="/repositorio" class="btn">Projetos</router-link>
-        <!-- <router-link to="/certificados" class="btn">Cursos Realizados</router-link> -->
-        <!-- <router-link to="/" class="btn">Certificados</router-link> -->
-        <!-- <router-link to="https://www.linkedin.com/in/edurojas-developer/" class="btn">Linkedin</router-link> -->
-        <a
-          href="https://www.linkedin.com/in/edurojas-developer/"
-          target="_blank"
-          class="btn"
-          >Linkedin</a
-        >
+        <router-link to="/repositorio" class="btn">
+          Projetos
+          <i class="fas fa-code"></i>
+        </router-link>
+        <div v-for="link in links" :key="link">
+          <a :href="link.desc" target="_blank" class="btn">
+            {{ link.nome }}
+            <i :class="link.icon"></i>
+          </a>
+        </div>
       </div>
-      <span id="logo">Portfólio</span>
+      <span id="logo" @click="onClick">Portfólio</span>
     </div>
   </div>
 </template>
 <script>
 export default {
   name: "intro",
+  data() {
+    return {
+      links: [
+        {
+          desc: "https://www.linkedin.com/in/edurojas-developer/",
+          icon: "fab fa-linkedin",
+          nome: "Linkedin",
+        },
+        {
+          desc: "https://github.com/edurojas-dev",
+          icon: "fab fa-github",
+          nome: "Github",
+        },
+        {
+          desc: "https://www.instagram.com/tagbloog/",
+          icon: "fab fa-instagram",
+          nome: "TagBloog",
+        },
+      ],
+    };
+  },
+  methods: {
+    onClick() {
+      this.$gtm.trackEvent({
+        event: null, // Event type [default = 'interaction'] (Optional)
+        category: "Calculator",
+        action: "click",
+        label: "Home page SIP calculator",
+        value: 5000,
+        noninteraction: false, // Optional
+      });
+    },
+  },
 };
 </script>
 <style scoped>
@@ -63,8 +97,22 @@ export default {
   text-decoration: none;
   border-radius: 5px;
   margin: 10px auto;
-  width: 160px !important;
-  display: block;
+  width: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.2s;
+}
+
+.btn:hover {
+  background-color: #101733;
+  color: white;
+  width: 170px;
+}
+
+.btn i {
+  margin: 0 5px;
+  font-size: 18px;
 }
 
 h1,
@@ -91,7 +139,7 @@ h4 {
   #logo {
     display: none;
   }
-  #intro{
+  #intro {
     background-image: url("../assets/bgMobile.png");
   }
 }

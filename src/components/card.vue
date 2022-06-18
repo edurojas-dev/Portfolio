@@ -119,7 +119,8 @@ export default {
   text-align: left;
 }
 .card-text {
-  height: 80%;
+  padding-top: 5px;
+  height: 88%;
 }
 
 .areabtn {
@@ -128,7 +129,6 @@ export default {
 }
 
 .areabtn a {
-  background-color: #1e1842;
   color: white;
   padding: 10px;
   text-decoration: none;
@@ -163,8 +163,8 @@ export default {
   box-shadow: 0px 30px 40px -20px #4c4e61;
   padding: 5px 20px;
   margin: 20px;
-  width: 500px;
-  height: 200px;
+  width: 260px;
+  height: 320px;
 }
 
 @media (max-width: 600px) {

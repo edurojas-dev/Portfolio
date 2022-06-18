@@ -58,17 +58,22 @@ export default {
     };
   },
 
-  mounted() {
-    setTimeout(() => {
-      axios.get("https://api.github.com/users/edurojas-dev/repos").then((r) => {
-        this.dadoss = r.data;
-        this.dados = r.data;
-        console.log(this.dados)
-      });
-    }, 800);
+  created() {
+    axios.get("https://api.github.com/users/edurojas-dev/repos").then((r) => {
+      this.dadoss = r.data;
+      this.dados = r.data;
+      console.log(this.dados);
+      console.log(this.dados.length);
+    });
+    // this.onLoad();
   },
 
   methods: {
+    // onLoad() {
+    //   this.$gtm.dataLayer.push({
+    //     event: "Pagina Repositorio Carregada!",
+    //   });
+    // },
     listarPorlang(ling) {
       this.dados = this.dadoss;
       let listar = this.dados.filter((item) => {
@@ -115,10 +120,8 @@ export default {
   align-items: center;
   padding-bottom: 70px;
   padding-top: 50px;
-  /* background-color: #1e1842; */
   background-image: url("../assets/bg3.png");
   background-attachment: fixed;
-  /* background-position: cen; */
   background-size: 100%;
   height: 277px;
   font-family: "Nunito", sans-serif;
@@ -287,8 +290,8 @@ input {
 }
 
 @media (max-width: 600px) {
-  .search{
-    background-color: #17203F;
+  .search {
+    background-color: #17203f;
     background-image: none;
   }
   .search div button {
